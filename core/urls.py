@@ -20,16 +20,18 @@ from rest_framework import routers
 from rest_framework.documentation import include_docs_urls
 
 from posts.views import PostViewSet, CommitViewSet
+from users.views import UserViewSet
 
 router = routers.DefaultRouter()
 router.trailing_slash = ''
 router.register('posts', PostViewSet)
 router.register('commits', CommitViewSet)
+router.register('users', UserViewSet)
 
 urlpatterns = [
     path('api/', include(router.urls)),
 
-    path('docs/', include_docs_urls(title='Django Post')),
+    path('docs/', include_docs_urls(title='Django Instagram')),
     path('jet/', include('jet.urls', 'jet')),
     path('admin/', admin.site.urls),
 ]
