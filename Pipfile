@@ -12,6 +12,7 @@ django-jet = "*"
 django-bootstrap4 = "*"
 ipython = "*"
 django-extensions = "*"
+coreapi = "*"
 
 [requires]
 python_version = "3.7"
